@@ -63,7 +63,7 @@ WHERE
     SalesPerson.sales_id NOT IN
 (SELECT Orders.sales_id FROM
 Company 
-LEFT JOIN
+RIGHT JOIN
 Orders
 On
     Orders.com_id = Company.com_id
