@@ -20,16 +20,9 @@ The test cases are generated so that exactly one customer will have placed more 
 
 SOLUTION -
 SELECT 
-    customer_number
+    customer_number 
 FROM
-    (# Write your MySQL query statement below
-    SELECT
-        customer_number,
-        COUNT(customer_number) as count_of_orders
-    FROM
-        orders
-    Group bY
-        customer_number
-    ORDER by count_of_orders DESC
-    LIMIT 1
-    ) as t1
+    Orders 
+GROUP BY Customer_number  
+ORDER BY count(customer_number) 
+DESC limit 1
